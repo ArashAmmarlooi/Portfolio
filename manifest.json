@@ -1,15 +1,15 @@
 {
-  "main.css": "style.7b49cffacd71b7e60e0f.css",
-  "main.js": "bundle.b981aca61795aaab2de9.js",
-  "mobile1.svg": "48e7911a8f3e141673f26ebcd12e2634.svg",
-  "web2.svg": "e63dbae01fc493c815525e41b56efd9b.svg",
-  "webhomeimg.png": "d6611377813930a0eb64409a2f56e398.png",
-  "mobile2.svg": "1ce583ee1ba4ffb27ebd18add1da2089.svg",
-  "web1.svg": "e0bbb45fafb516f7ac89a05dd075248f.svg",
-  "Producthomeimg.jpg": "b61feb61ff45598c775fdf9e7576b551.jpg",
-  "devophomeimg.jpg": "62bffe94baca9261713e8b316da833db.jpg",
-  "mobilehomeimg.jpg": "382a1e06b37cccad44eb664fd6902bda.jpg",
-  "Productsvg.svg": "4f21378e034230e12b21b7c43a10e808.svg",
-  "devopssvg.svg": "1d12cf43105c7380907b26be88c9728e.svg",
-  "index.html": "index.html"
+  "main.css": "/Portfoliostyle.3ea79a29952fbd0c3b18.css",
+  "main.js": "/Portfoliobundle.87abeabcfb844b8dc3e7.js",
+  "mobile1.svg": "/Portfolio48e7911a8f3e141673f26ebcd12e2634.svg",
+  "web2.svg": "/Portfolioe63dbae01fc493c815525e41b56efd9b.svg",
+  "webhomeimg.png": "/Portfoliod6611377813930a0eb64409a2f56e398.png",
+  "mobile2.svg": "/Portfolio1ce583ee1ba4ffb27ebd18add1da2089.svg",
+  "web1.svg": "/Portfolioe0bbb45fafb516f7ac89a05dd075248f.svg",
+  "Producthomeimg.jpg": "/Portfoliob61feb61ff45598c775fdf9e7576b551.jpg",
+  "devophomeimg.jpg": "/Portfolio62bffe94baca9261713e8b316da833db.jpg",
+  "mobilehomeimg.jpg": "/Portfolio382a1e06b37cccad44eb664fd6902bda.jpg",
+  "Productsvg.svg": "/Portfolio4f21378e034230e12b21b7c43a10e808.svg",
+  "devopssvg.svg": "/Portfolio1d12cf43105c7380907b26be88c9728e.svg",
+  "index.html": "/Portfolioindex.html"
 }
