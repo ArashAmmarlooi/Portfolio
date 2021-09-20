@@ -1,15 +1,15 @@
 {
-  "main.css": "style.019c40dc66a55721326a.css",
-  "main.js": "bundle.275f2041489ac9fdbd8d.js",
-  "mobile1.svg": "48e7911a8f3e141673f26ebcd12e2634.svg",
-  "web2.svg": "e63dbae01fc493c815525e41b56efd9b.svg",
-  "webhomeimg.png": "d6611377813930a0eb64409a2f56e398.png",
-  "mobile2.svg": "1ce583ee1ba4ffb27ebd18add1da2089.svg",
-  "web1.svg": "e0bbb45fafb516f7ac89a05dd075248f.svg",
-  "Producthomeimg.jpg": "b61feb61ff45598c775fdf9e7576b551.jpg",
-  "devophomeimg.jpg": "62bffe94baca9261713e8b316da833db.jpg",
-  "mobilehomeimg.jpg": "382a1e06b37cccad44eb664fd6902bda.jpg",
-  "Productsvg.svg": "4f21378e034230e12b21b7c43a10e808.svg",
-  "devopssvg.svg": "1d12cf43105c7380907b26be88c9728e.svg",
-  "index.html": "index.html"
+  "main.css": "/style.86c6dcec0d4699aa6e30.css",
+  "main.js": "/bundle.15eb7af7b57363f1e51b.js",
+  "mobile1.svg": "/48e7911a8f3e141673f26ebcd12e2634.svg",
+  "web2.svg": "/e63dbae01fc493c815525e41b56efd9b.svg",
+  "webhomeimg.png": "/d6611377813930a0eb64409a2f56e398.png",
+  "mobile2.svg": "/1ce583ee1ba4ffb27ebd18add1da2089.svg",
+  "web1.svg": "/e0bbb45fafb516f7ac89a05dd075248f.svg",
+  "Producthomeimg.jpg": "/b61feb61ff45598c775fdf9e7576b551.jpg",
+  "devophomeimg.jpg": "/62bffe94baca9261713e8b316da833db.jpg",
+  "mobilehomeimg.jpg": "/382a1e06b37cccad44eb664fd6902bda.jpg",
+  "Productsvg.svg": "/4f21378e034230e12b21b7c43a10e808.svg",
+  "devopssvg.svg": "/1d12cf43105c7380907b26be88c9728e.svg",
+  "index.html": "/index.html"
 }
