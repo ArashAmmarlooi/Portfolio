@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const { animatebio, animatemenu } = require("../utils/anime");
 // import Rectangle from "../files/Rectangle.svg";
 import styles from "../assets/__home.scss";
-import Webhomeimg from "../files/webhomeimg.png";
+import Webhomeimg from "../files/webhomeimg.jpg";
 import Mobilehomeimg from "../files/mobilehomeimg.jpg";
 import Producthomeimg from "../files/Producthomeimg.jpg";
 import Devopshomeimg from "../files/devophomeimg.jpg";

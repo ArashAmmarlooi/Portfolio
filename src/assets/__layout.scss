@@ -7,7 +7,6 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
 :global {
   .page {
     position: absolute;
@@ -46,7 +45,7 @@ body {
   .aboutparag {
     display: flex;
     margin: 0 auto;
-    transform: translateY(193px) !important;
+    transform: translateY(25vh) !important;
     flex-direction: column;
     line-height: 40px;
     width: 86%;
