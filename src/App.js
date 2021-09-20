@@ -9,7 +9,7 @@ import Devops from "./pages/devops";
 import "./assets/__layout.scss";
 import "./assets/__technology.scss";
 import Navmenu from "./components/Navmenu";
-import { Switch, Route, useLocation, useHistory, useRouteMatch } from "react-router-dom";
+import { Switch, Route, useLocation, useHistory, useRouteMatch, HashRouter  } from "react-router-dom";
 import { playentered, entering, exiting } from "./utils/anime"
 import {autoslide, handleTab} from "./utils/javascript"
 
@@ -35,18 +35,16 @@ const routes = [
 const App = () => {
   const location = useLocation();
   const history = useHistory();
-  const techpath ="http://localhost:3000/technologies"
+  const techlocalpath ="http://localhost:3000/technologies"
+  const techlivepath ="https://arashammarlooi.github.io/technologies"
   const homepath ="http://localhost:3000/"
   const currentKey = location.pathname.split("/")[1] || "/";
   const timeout = { enter: 500, exit: 500 };
+
   useEffect(() => {
-    const footer = document.querySelector(".footer-1_kYo")
-    clearInterval()
-    // autoslide();
-    
-
-    if (window.location.href === techpath) history.push("/technologies/frontend")
-
+    const isTech = window.location.href == techlivepath
+    console.log(isTech);
+    if (isTech) history.push("/technologies/frontend")
   }, [window.location.href]);
   return (
     <>
@@ -62,7 +60,7 @@ const App = () => {
         >
           <div className="page">
             <Switch location={location}>
-              <Route path="/" component={Home} />
+              <Route exact path="/Portfolio" component={Home} />
               {routes.map((route, i) => (
                 <Route path={route.path} key={i} component={route.component} />
               ))}

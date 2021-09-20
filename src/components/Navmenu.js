@@ -14,11 +14,12 @@ const Navmenu = () => {
   const [state, setState] = useState(false);
   const location = useLocation();
   const { pathname } = location;
+  const path = "https://arashammarlooi.github.io/Portfolio/"
 
   useEffect(() => {
-    if (pathname == "/") setState(true);
+    if ((window.location.href == path) || (pathname == "/Portfolio")) setState(true);
     else setState(false);
-  }, [pathname]);
+  }, [window.location.href, pathname]);
 
   return (
     <nav className={state ? styles.homenavmenu : styles.navmenu}>
@@ -26,7 +27,7 @@ const Navmenu = () => {
 
       <ul>
         <li>
-          <NavLink exact activeClassName={styles.navactive} to="/">
+          <NavLink exact activeClassName={styles.navactive} to="/Portfolio">
             Home
           </NavLink>
         </li>

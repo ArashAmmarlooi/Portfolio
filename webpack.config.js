@@ -13,18 +13,17 @@ const devMode = process.env.NODE_ENV === "production";
 
 const config = {
   mode: process.env.NODE_ENV || "development",
-  // resolve: { modules: [path.resolve(__dirname, "src"), "node_modules"] },
   entry: path.join(__dirname, "src", "index.js"),
   output: {
     path: path.resolve(__dirname, "build"),
     filename: devMode ? "bundle.js" : "bundle.[contenthash].js",
-    publicPath:"/"
+    publicPath:""
   },
   devServer: {
     port: 3000,
-    contentBase: path.resolve(__dirname, "build"),
-    inline:true,
-    watchContentBase: true,
+    contentBase: path.resolve(__dirname, "src"),
+    // inline:true,
+    // watchContentBase: true,
     hot: true,
     historyApiFallback: true,
   },

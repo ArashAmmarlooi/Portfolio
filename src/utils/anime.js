@@ -97,12 +97,12 @@ function animatemenu() {
 
 //technology page
 function handleTechnology(node) {
-  const techmenuli = node.querySelectorAll(".techmenu-1n3A7 ul li");
+  const techmenuli = node.querySelectorAll(".techmenu-3CKhE ul li");
   const tabparags = node.querySelectorAll(
-    ".tabwrapper-3Ystf .tabcontainer-3m7xM div p"
+    ".tabwrapper-1qhUY .tabcontainer-3ldPc div p"
   );
   const tabspan = node.querySelectorAll(
-    ".tabwrapper-3Ystf .tabcontainer-3m7xM div div"
+    ".tabwrapper-1qhUY .tabcontainer-3ldPc div div"
   );
   console.log(tabparags, "tabparags");
   anime({
@@ -159,7 +159,7 @@ function hanldeservices(node) {
 
 function handleabout(node) {
   const parag = node.querySelectorAll(
-    ".aboutcontainer-1ZeQg .aboutparag-ojq-O"
+    ".aboutcontainer-1UuJZ .aboutparag-1XTj9"
   );
   anime({
     targets: parag,
@@ -174,7 +174,6 @@ function handleabout(node) {
 
 function entering(node, appears) {
   const images = node.querySelectorAll(".maincontainer .rightcontainer img")
-  console.log(images, 'node images');
   hanldeservices(node);
   handleTechnology(node);
   handleabout(node);
