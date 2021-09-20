@@ -20,7 +20,7 @@ const Home = () => {
       setMenu(true);
       animatemenu();
     }, 7000);
-  }, []);
+  }, [window.location.href]);
 
   return (
     <>

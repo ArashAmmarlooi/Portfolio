@@ -158,7 +158,7 @@ function hanldeservices(node) {
 }
 
 function handleabout(node) {
-  const parag = node.querySelectorAll(
+  const parag = node.querySelector(
     ".aboutcontainer-1UuJZ .aboutparag-1XTj9"
   );
   anime({

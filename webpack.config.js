@@ -17,7 +17,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, "build"),
     filename: devMode ? "bundle.js" : "bundle.[contenthash].js",
-    publicPath:""
+    // publicPath:"/Portfolio"
   },
   devServer: {
     port: 3000,
@@ -83,7 +83,13 @@ const config = {
 
       {
         test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
-        use: ["file-loader"],
+        loader: 'file-loader',
+        options: {
+          // Images larger than 10 KB won’t be inlined
+          limit: 10 * 1024,
+          noquotes: true,
+        }
+
       },
     ],
   },

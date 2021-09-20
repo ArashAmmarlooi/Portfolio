@@ -37,13 +37,11 @@ const App = () => {
   const history = useHistory();
   const techlocalpath ="http://localhost:3000/technologies"
   const techlivepath ="https://arashammarlooi.github.io/technologies"
-  const homepath ="http://localhost:3000/"
   const currentKey = location.pathname.split("/")[1] || "/";
   const timeout = { enter: 500, exit: 500 };
 
   useEffect(() => {
     const isTech = window.location.href == techlivepath
-    console.log(isTech);
     if (isTech) history.push("/technologies/frontend")
   }, [window.location.href]);
   return (
