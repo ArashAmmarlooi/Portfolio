@@ -101,15 +101,25 @@
         }
       }
 
-      .websvg {
-      }
-      .mobilesvg {
-        margin-top: 100px;
-      }
 
-      .productsvg {
-      }
-      .devopssvg {
+      .rightcontainer {
+        .websvg {
+          max-height: 40vh !important;
+        }
+
+        .mobilesvg {
+          margin-top: 100px;
+          max-height: 50vh !important;
+        }
+
+        .productsvg {
+          max-height: 28vh !important;
+        }
+
+        .devopssvg {
+          min-height: 16vh !important;
+          max-height: 15vh !important;
+        }
       }
     }
   }

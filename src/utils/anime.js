@@ -104,7 +104,6 @@ function handleTechnology(node) {
   const tabspan = node.querySelectorAll(
     ".tabwrapper-1qhUY .tabcontainer-3ldPc div div"
   );
-  console.log(tabparags, "tabparags");
   anime({
     targets: techmenuli,
     easing: "easeInOutCubic",

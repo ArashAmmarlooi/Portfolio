@@ -17,6 +17,7 @@ const Navmenu = () => {
   const path = "https://arashammarlooi.github.io/Portfolio/"
 
   useEffect(() => {
+    console.log(pathname, 'pathname in nav');
     if ((window.location.href == path) || (pathname == "/Portfolio")) setState(true);
     else setState(false);
   }, [window.location.href, pathname]);
@@ -36,29 +37,29 @@ const Navmenu = () => {
           <span className={styles.arrow}></span>
           <div className={styles.submenu}>
             <p>
-              <NavLink activeClassName={styles.navactive} to="/web">
+              <NavLink activeClassName={styles.navactive} to="/Portfolio/web">
                 web
               </NavLink>
             </p>
             <p>
-              <NavLink activeClassName={styles.navactive} to="/mobile">
+              <NavLink activeClassName={styles.navactive} to="/Portfolio/mobile">
                 mobile
               </NavLink>
             </p>
             <p>
-              <NavLink activeClassName={styles.navactive} to="/product">
+              <NavLink activeClassName={styles.navactive} to="/Portfolio/product">
                 product
               </NavLink>
             </p>
             <p>
-              <NavLink activeClassName={styles.navactive} to="/devops">
+              <NavLink activeClassName={styles.navactive} to="/Portfolio/devops">
                 devops
               </NavLink>
             </p>
           </div>
         </li>
         <li>
-          <NavLink activeClassName={styles.navactive} to="/technologies">
+          <NavLink activeClassName={styles.navactive} to="/Portfolio/technologies">
             Technology
           </NavLink>
           {/* <div className={styles.submenu}>
@@ -69,7 +70,7 @@ const Navmenu = () => {
                 </div> */}
         </li>
         <li>
-          <NavLink activeClassName={styles.navactive} to="/about">
+          <NavLink activeClassName={styles.navactive} to="/Portfolio/about">
             About
           </NavLink>
         </li>

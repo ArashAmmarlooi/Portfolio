@@ -45,8 +45,8 @@ const Web = () => {
           </div>
 
           <div className="rightcontainer">
-            <img src={Web1} className="websvg" alt="websvg"/>
-            <img src={Web2} className="websvg" alt="websvg"/>
+            <img src={Web1} className="websvg" alt=""/>
+            <img src={Web2} className="websvg" alt=""/>
           </div>
         </div>
         {/* <div className="footer">Deve  loped and deisgned by Arash Ammarlooi</div> */}

@@ -6,7 +6,8 @@ import {
   Switch,
   useLocation,
   NavLink,
-  useHistory
+  useHistory,
+  useRouteMatch
 } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import Frontendcomp from "../components/Frontendcomp";
@@ -20,10 +21,9 @@ import "../assets/__layout.scss";
 import "../assets/__technology.scss";
 
 const Technology = ({ match }) => {
+  const routeMatch =useRouteMatch()
   const location = useLocation();
 const history = useHistory();
-  const { pathname, key } = location;
-  const { path, url } = match;
   const currentKey = location.pathname.split("/")[1] || "/";
   const timeout = { enter: 500, exit: 500 };
 
@@ -38,16 +38,16 @@ const history = useHistory();
         <div className={styles.techmenu}>
           <ul>
             <li>
-              <NavLink to="/technologies/frontend">frontend</NavLink>
+              <NavLink to="/Portfolio/technologies/frontend">frontend</NavLink>
             </li>
             <li>
-              <NavLink to="/technologies/backend">backend</NavLink>
+              <NavLink to="/Portfolio/technologies/backend">backend</NavLink>
             </li>
             <li>
-              <NavLink to="/technologies/product">product</NavLink>
+              <NavLink to="/Portfolio/technologies/product">product</NavLink>
             </li>
             <li>
-              <NavLink to="/technologies/devops">devops</NavLink>
+              <NavLink to="/Portfolio/technologies/devops">devops</NavLink>
             </li>
           </ul>
         </div>
@@ -59,10 +59,10 @@ const history = useHistory();
         <div className={styles.tabwrapper}>
           <div className={styles.tabcontainer}>
             <Switch>
-              <Route path="/technologies/frontend" component={Frontendcomp} />
-              <Route path="/technologies/backend" component={Backendcomp} />
-              <Route path="/technologies/product" component={Productcomp} />
-              <Route path="/technologies/devops" component={Devopscomp} />
+              <Route path="/Portfolio/technologies/frontend" component={Frontendcomp} />
+              <Route path="/Portfolio/technologies/backend" component={Backendcomp} />
+              <Route path="/Portfolio/technologies/product" component={Productcomp} />
+              <Route path="/Portfolio/technologies/devops" component={Devopscomp} />
             </Switch>
             {/* <Route
               path={`${path}`}

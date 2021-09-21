@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const { animatebio, animatemenu } = require("../utils/anime");
 // import Rectangle from "../files/Rectangle.svg";
 import styles from "../assets/__home.scss";
@@ -11,6 +11,8 @@ import "../assets/__layout.scss";
 import "../assets/__home.scss";
 
 const Home = () => {
+  const location = useLocation()
+  const path = location.pathname 
   const [isBio, setIsBio] = useState(true);
   const [isMenu, setMenu] = useState(false);
 
@@ -38,23 +40,23 @@ const Home = () => {
           <div className={styles.containermenu}>
             <div className={styles.containerbox}>
               <p>
-                <Link to="/web">Web development</Link>
+                <Link to={`${path}/web`}>Web development</Link>
               </p>
-              <img className={styles.web} src={Webhomeimg} alt="web" />
+              <img className={styles.web} src={Webhomeimg} alt={`${path}web`} />
               <div className={styles.fade}></div>
             </div>
 
             <div className={styles.containerbox}>
               <p>
-                <Link to="/mobile">mobile development</Link>
+                <Link to={`${path}/mobile`}>mobile development</Link>
               </p>
-              <img className={styles.mobile} src={Mobilehomeimg} alt="mobile" />
+              <img className={styles.mobile} src={Mobilehomeimg} alt={`${path}mobile`} />
               <div className={styles.fade}></div>
             </div>
 
             <div className={styles.containerbox}>
               <p>
-                <Link to="/product">Product designing</Link>
+                <Link to={`${path}/product`}>Product designing</Link>
               </p>
 
               <img

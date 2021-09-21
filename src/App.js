@@ -21,28 +21,31 @@ import {
 } from "react-transition-group";
 
 const routes = [
-  { path: "/web", exact: "false", name: "Web", component: Web },
+  { path: "/Portfolio/web", exact: "false", name: "Web", component: Web },
   {
-    path: "/mobile",
+    path: "/Portfolio/mobile",
     exact: "false",
     name: "Mobile",
     component: Mobile,
   },
-  { path: "/product", exact: "false", name: "Product", component: Product },
-  { path: "/devops", exact: "false", name: "Devops", component: Devops },
+  { path: "/Portfolio/product", exact: "false", name: "Product", component: Product },
+  { path: "/Portfolio/devops", exact: "false", name: "Devops", component: Devops },
 ];
 
 const App = () => {
   const location = useLocation();
   const history = useHistory();
-  const techlocalpath ="http://localhost:3000/technologies"
-  const techlivepath ="https://arashammarlooi.github.io/technologies"
+
+  const devMode = process.env.NODE_ENV === "production";
+
+  const techlocalpath ="http://localhost:3000/Portfolio/technologies"
+  const techlivepath ="https://arashammarlooi.github.io/Portfolio/technologies"
   const currentKey = location.pathname.split("/")[1] || "/";
   const timeout = { enter: 500, exit: 500 };
 
   useEffect(() => {
-    const isTech = window.location.href == techlivepath
-    if (isTech) history.push("/technologies/frontend")
+    const isTech = window.location.href == techlivepath;
+    if (isTech) history.push("/Portfolio/technologies/frontend")
   }, [window.location.href]);
   return (
     <>
@@ -62,8 +65,8 @@ const App = () => {
               {routes.map((route, i) => (
                 <Route path={route.path} key={i} component={route.component} />
               ))}
-              <Route path="/technologies/:name" component={Technology} />
-              <Route path="/about" component={About} />
+              <Route path="/Portfolio/technologies/:name" component={Technology} />
+              <Route path="/Portfolio/about" component={About} />
             </Switch>
           </div>
         </CSSTransition>
