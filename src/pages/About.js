@@ -44,7 +44,7 @@ const About = () => {
           </div>
           <div className={styles.email}>
             <img src={Email}/>
-            <a href="arashammarlooi@hotmail.com">arashammarlooi@hotmail.com</a>
+            <a href="mailto:arashammarlooi@hotmail.com">arashammarlooi@hotmail.com</a>
           </div>
           <div className={styles.linkedin}>
             <img src={Linkedin}/>
