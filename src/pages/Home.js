@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useRouteMatch } from "react-router-dom";
 const { animatebio, animatemenu } = require("../utils/anime");
 // import Rectangle from "../files/Rectangle.svg";
 import styles from "../assets/__home.scss";
@@ -12,7 +12,12 @@ import "../assets/__home.scss";
 
 const Home = () => {
   const location = useLocation()
-  const path = location.pathname 
+  const router = useRouteMatch()
+  console.log(router, 'router match');
+  console.log(location, 'location');
+  const {url} = router
+  // const path = location.pathname.substring(0, location.pathname.length -1) 
+  const {pathname} = location
   const [isBio, setIsBio] = useState(true);
   const [isMenu, setMenu] = useState(false);
 
@@ -40,36 +45,36 @@ const Home = () => {
           <div className={styles.containermenu}>
             <div className={styles.containerbox}>
               <p>
-                <Link to={`${path}/web`}>Web development</Link>
+                <Link to="/Portfolio/web">Web development</Link>
               </p>
-              <img className={styles.web} src={Webhomeimg} alt={`${path}web`} />
+              <img className={styles.web} src={Webhomeimg} alt={`${url}web`} />
               <div className={styles.fade}></div>
             </div>
 
             <div className={styles.containerbox}>
               <p>
-                <Link to={`${path}/mobile`}>mobile development</Link>
+                <Link to="/Portfolio/mobile">mobile development</Link>
               </p>
-              <img className={styles.mobile} src={Mobilehomeimg} alt={`${path}mobile`} />
+              <img className={styles.mobile} src={Mobilehomeimg} />
               <div className={styles.fade}></div>
             </div>
 
             <div className={styles.containerbox}>
               <p>
-                <Link to={`${path}/product`}>Product designing</Link>
+                <Link to="/Portfolio/product">Product designing</Link>
               </p>
 
               <img
                 className={styles.product}
                 src={Producthomeimg}
-                alt="Product"
+                alt="/PortfolioProduct"
               />
               <div className={styles.fade}></div>
             </div>
 
             <div className={styles.containerbox}>
               <p>
-                <Link to="/devops">Devops engineering</Link>
+                <Link to="/Portfolio/devops">Devops engineering</Link>
               </p>
               <img className={styles.devops} src={Devopshomeimg} alt="Devops" />
               <div className={styles.fade}></div>

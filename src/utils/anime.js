@@ -158,14 +158,25 @@ function hanldeservices(node) {
 
 function handleabout(node) {
   const parag = node.querySelector(
-    ".aboutcontainer-1UuJZ .aboutparag-1XTj9"
+    ".aboutcontainer-1UuJZ"
   );
+
+  const contacts = node.querySelectorAll(".contactcontainer-ZZ6IH div")
   anime({
     targets: parag,
     easing: "easeInOutCubic",
     translateY: [-50, 20],
     opacity: [0, 1],
     duration: 1000,
+  });
+
+  anime({
+    targets: contacts,
+    easing: "easeInOutCubic",
+    translateY: [-20, 20],
+    opacity: [0, 1],
+    duration: 500,
+    delay: anime.stagger(180, { start: 200 }),
   });
 }
 

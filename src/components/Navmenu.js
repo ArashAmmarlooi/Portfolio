@@ -17,7 +17,6 @@ const Navmenu = () => {
   const path = "https://arashammarlooi.github.io/Portfolio/"
 
   useEffect(() => {
-    console.log(pathname, 'pathname in nav');
     if ((window.location.href == path) || (pathname == "/Portfolio")) setState(true);
     else setState(false);
   }, [window.location.href, pathname]);
