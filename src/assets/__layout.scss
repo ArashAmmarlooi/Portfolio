@@ -74,6 +74,9 @@ body {
     .email {
       display: flex;
       gap: 20px;
+      a{
+        transform: translateY(5px);
+      }
     }
     .linkedin {
       gap: 20px;

@@ -165,7 +165,7 @@ function handleabout(node) {
   anime({
     targets: parag,
     easing: "easeInOutCubic",
-    translateY: [-50, 20],
+    translateY: [-50, 0],
     opacity: [0, 1],
     duration: 1000,
   });
