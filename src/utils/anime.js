@@ -181,7 +181,6 @@ function handleabout(node) {
 }
 
 function handleContact(node) {
-
 console.log(node, "contact node");
 const parags = node.querySelectorAll(".contactbox-3yyUT div")
 const image = node.querySelectorAll(".contactsvgcontainer-1NLZb img")
@@ -206,7 +205,6 @@ anime({
 }
 
 //entering fucntion for all components
-
 function entering(node, appears) {
   const images = node.querySelectorAll(".maincontainer .rightcontainer img")
   hanldeservices(node);
