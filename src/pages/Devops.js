@@ -15,23 +15,23 @@ const Devops = () => {
             <div className="description">
               <p>
                 Experience with Scrum system & task management tools like jira ,
-                click up , wrike , Monday & Kanban flow
+                click up , wrike , Monday & Kanban flow .
               </p>
               <p>
                 Experience working in an agile environment ( planning sprints ,
                 burndown charts )Agile methodology includes research, analysis,
                 project management, design, programming, implementation,
                 adaptation and maintenance. and working well with
-                cross-functional teams
+                cross-functional teams .
               </p>
               <p>
                 Experience with architecting environments for deployment , Build
                 , Test & production environment , hosting , ip configs , ftp ,
-                ssh & web server management tools
+                ssh & web server management tools .
               </p>
               <p>
                 Background in continuous integration & Delivery (CI/CD) with git
-                lab Confluence
+                lab Confluence .
               </p>
             </div>
           </div>

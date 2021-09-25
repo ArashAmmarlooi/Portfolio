@@ -49,7 +49,6 @@ $boxheight: 250px;
     h1 {
       opacity: 0;
       text-align: center;
-
     }
     p {
       opacity: 0;
@@ -206,29 +205,23 @@ $boxheight: 250px;
 
 @media (max-width: 1198px) {
   .container {
-    height: 110vh !important;
+    height: 140vh !important;
     .containermenu {
       flex-direction: column;
-      height: 100vh !important;
-      margin-top: 10% !important;
-      .containerbox {
-        width: 100% !important;
-      }
+
+    }
+    .containerbox {
+      width: 100% !important;
     }
   }
 }
 
-@media (max-width: 638px) {
-  .containermenu {
-    margin-top: 30%;
-  }
-}
+
 
 @media (max-width: 554px) {
   .containermenu {
     flex-direction: column;
-    height: 90vh !important;
-    margin-top: 20% !important;
+
     .containerbox {
       width: 100% !important;
     }

@@ -39,66 +39,17 @@ body {
 }
 
 .aboutwrraper {
-  display: flex;
-  flex-direction: row;
   width: 100%;
   min-height: 100vh;
-
-  .contactwrraper {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    flex: 1;
-    .contactcontainer {
-      display: flex;
-      font-size: 13px;
-      gap: 20px;
-      flex-direction: column;
-      justify-content: center;
-      max-width: 55%;
-      width: 60%;
-      min-width: 198px;
-      height: 400px;
-    }
-    .phone {
-      display: flex;
-      gap: 20px;
-
-      span {
-        display: flex;
-        flex-direction: column;
-      }
-    }
-    .email {
-      display: flex;
-      gap: 20px;
-      a{
-        transform: translateY(5px);
-      }
-    }
-    .linkedin {
-      gap: 20px;
-      display: flex;
-      width: 100%;
-      img {
-        width: 30px;
-        height: 30px;
-      }
-    }
-  }
-
   .aboutcontainer {
     flex: 1;
     display: flex;
     margin: 0 auto;
     // transform: translateY(25vh) !important;
-    flex-direction: column;
     line-height: 40px;
-    width: 86%;
+    width: 69%;
     justify-content: center;
-    min-height: 400px;
+    min-height: 100vh;
     align-items: center;
     p {
       width: 88%;
@@ -135,13 +86,19 @@ body {
   .aboutwrraper {
     flex-direction: column;
     .aboutcontainer {
-      text-align: center;
-      margin-top: 150px;
+      p {
+        text-align: center;
+      }
     }
+  }
+}
 
-    .contactcontainer {
-      // padding-left: 100px;
-      width: 48% !important;
+@media (max-width: 643px) {
+  .aboutwrraper {
+    .aboutcontainer {
+      p {
+        margin-top: 182px;
+      }
     }
   }
 }

@@ -6,6 +6,7 @@ import Web from "./pages/Web";
 import Mobile from "./pages/Mobile";
 import Product from "./pages/Product";
 import Devops from "./pages/devops";
+import Contact from "./pages/Contact";
 import "./assets/__layout.scss";
 import "./assets/__technology.scss";
 import Navmenu from "./components/Navmenu";
@@ -67,6 +68,7 @@ const App = () => {
               ))}
               <Route path="/Portfolio/technologies/:name" component={Technology} />
               <Route path="/Portfolio/about" component={About} />
+              <Route path="/Portfolio/contact" component={Contact} />
             </Switch>
           </div>
         </CSSTransition>

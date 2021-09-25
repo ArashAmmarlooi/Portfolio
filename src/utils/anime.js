@@ -180,6 +180,31 @@ function handleabout(node) {
   });
 }
 
+function handleContact(node) {
+
+console.log(node, "contact node");
+const parags = node.querySelectorAll(".contactbox-3yyUT div")
+const image = node.querySelectorAll(".contactsvgcontainer-1NLZb img")
+
+anime({
+  targets: parags,
+  easing: "easeInOutCubic",
+  translateY: [-20, 20],
+  opacity: [0, 1],
+  duration: 500,
+  delay: anime.stagger(180, { start: 200 }),
+});
+
+anime({
+  targets: image,
+  easing: "easeInOutCubic",
+  translateY: [-30, 20],
+  opacity: [0, 1],
+  duration: 800,
+  delay: 200,
+});
+}
+
 //entering fucntion for all components
 
 function entering(node, appears) {
@@ -187,6 +212,7 @@ function entering(node, appears) {
   hanldeservices(node);
   handleTechnology(node);
   handleabout(node);
+  handleContact(node)
   if (images.length === 2) autoSlide(images);
 }
 

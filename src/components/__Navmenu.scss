@@ -1,5 +1,6 @@
 .navmenu {
   width: 100%;
+  gap: 30px;
   position: absolute;
   min-height: 130px;
   z-index: 4;
@@ -17,6 +18,7 @@
 
   ul {
     display: flex;
+
     color: white;
     list-style-type: none;
 
@@ -24,6 +26,18 @@
       font-size: 14px;
       color: gray;
       margin-right: 5vw;
+      .arrow {
+        position: absolute;
+        top: 9px;
+        right: -17px;
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid gray;
+        border-radius: 3px;
+        transition: all 0.1s ease-in-out;
+      }
 
       &:hover {
         .line {
@@ -55,18 +69,6 @@
         text-decoration: none;
         color: gray;
         cursor: pointer;
-      }
-      .arrow {
-        position: absolute;
-        top: 9px;
-        right: -17px;
-        width: 0;
-        height: 0;
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-bottom: 6px solid gray;
-        border-radius: 3px;
-        transition: all 0.1s ease-in-out;
       }
 
       &:nth-child(2) {
@@ -141,17 +143,6 @@
     top: 70px;
   }
 }
-
-// @media (max-width:506px){
-// .navmenu {
-//   ul {
-//     flex-direction: column;
-//     li{
-//       margin-top: 10px;
-//     }
-//   }
-// }
-// }
 
 //home navmenu
 .homenavmenu {
@@ -257,15 +248,50 @@
 
 @media (max-width: 384px) {
   .homenavmenu {
+    min-height: 73px;
+    margin-top: 51px;
+    .titleHeader {
+      width: 115px;
+      margin-left: 0;
+    }
+    flex-direction: column;
+    gap: 20px;
     ul {
       justify-content: space-around;
       width: 100%;
+
       li {
         margin-right: 0;
       }
     }
+  }
+}
+
+@media (max-width: 642px) {
+  .navmenu {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
     .titleHeader {
-      display: none;
+      margin-left: 0;
+      width: 120px;
+      margin-top: 10px;
+    }
+
+    ul {
+      flex-wrap: wrap;
+      column-gap: 25px;
+      row-gap: 10px;
+      justify-content: space-evenly;
+      width: 100%;
+      li {
+        justify-content: center;
+        display: flex;
+        margin-right: 0;
+        .navactive::before {
+          display: none;
+        }
+      }
     }
   }
 }
@@ -273,30 +299,10 @@
 @media (max-width: 484px) {
   .navmenu {
     ul {
-      justify-content: space-around;
-      width: 100%;
       li {
-        margin-right: 0;
-
       }
       .line-2Z36e {
         display: none !important;
-      }
-    }
-
-    .titleHeader {
-      display: none;
-    }
-  }
-}
-
-@media (max-width: 642px) {
-  .navmenu {
-    ul {
-      li {
-        .navactive::before {
-          display: none;
-        }
       }
     }
   }

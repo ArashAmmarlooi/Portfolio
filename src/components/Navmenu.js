@@ -73,6 +73,11 @@ const Navmenu = () => {
             About
           </NavLink>
         </li>
+        <li>
+          <NavLink activeClassName={styles.navactive} to="/Portfolio/contact">
+            Contact
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
