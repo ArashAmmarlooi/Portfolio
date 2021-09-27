@@ -37,49 +37,52 @@ const Technology = ({ match }) => {
       <div className="page">
         <CSSTransition key={currentKey} timeout={timeout}>
           <div className={styles.tabwrapper}>
-            <div className={styles.techmenu}>
-              <ul>
-                <li>
-                  <NavLink to="/Portfolio/technologies/frontend">
-                    frontend
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/Portfolio/technologies/backend">
-                    backend
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/Portfolio/technologies/product">
-                    product
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/Portfolio/technologies/devops">devops</NavLink>
-                </li>
-              </ul>
-            </div>
+            <div className={styles.techcontent}>
+              <div className={styles.techmenu}>
+                <ul>
+                  <li>
+                    <NavLink to="/Portfolio/technologies/frontend">
+                      frontend
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/Portfolio/technologies/backend">
+                      backend
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/Portfolio/technologies/product">
+                      product
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/Portfolio/technologies/devops">
+                      devops
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
 
-            <div className={styles.tabcontainer}>
-              <Switch>
-                <Route
-                  path="/Portfolio/technologies/frontend"
-                  component={Frontendcomp}
-                />
-                <Route
-                  path="/Portfolio/technologies/backend"
-                  component={Backendcomp}
-                />
-                <Route
-                  path="/Portfolio/technologies/product"
-                  component={Productcomp}
-                />
-                <Route
-                  path="/Portfolio/technologies/devops"
-                  component={Devopscomp}
-                />
-              </Switch>
-              {/* <Route
+              <div className={styles.tabcontainer}>
+                <Switch>
+                  <Route
+                    path="/Portfolio/technologies/frontend"
+                    component={Frontendcomp}
+                  />
+                  <Route
+                    path="/Portfolio/technologies/backend"
+                    component={Backendcomp}
+                  />
+                  <Route
+                    path="/Portfolio/technologies/product"
+                    component={Productcomp}
+                  />
+                  <Route
+                    path="/Portfolio/technologies/devops"
+                    component={Devopscomp}
+                  />
+                </Switch>
+                {/* <Route
               path={`${path}`}
               render={({match}) => {
                 <>
@@ -95,6 +98,7 @@ const Technology = ({ match }) => {
                 </>
               }}
             /> */}
+              </div>
             </div>
           </div>
         </CSSTransition>
