@@ -1,6 +1,5 @@
 export default function autoslide() {
   const images = document.querySelectorAll(".__layout__websvg__1UnWI");
-  console.log(images, "images");
 
   let index = 0;
 

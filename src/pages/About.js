@@ -11,7 +11,7 @@ const About = () => {
       <div className={styles.aboutwrraper}>
         <div className={styles.aboutcontainer}>
           <p>
-            I am a full stack web & mobile application developer & designer . I
+            Hi, i am arash ammarlooi , I,m a full stack web & mobile application developer & designer . I
             have worked for about 5 years in web and mobile application
             engineering & i have exprience in developing and managing Different
             web and mobile apps . in this case i have knowledge about

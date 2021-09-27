@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import styles from "../components/__Navmenu.scss";
+const { animatenavmenu }  = require("../utils/anime");
 
 import {
   BrowserRouter as Router,
@@ -20,6 +21,13 @@ const Navmenu = () => {
     if ((window.location.href == path) || (pathname == "/Portfolio")) setState(true);
     else setState(false);
   }, [window.location.href, pathname]);
+
+  useEffect(() => {
+    const navli = document.querySelectorAll(".navmenu-1bbKl ul li");
+    animatenavmenu(navli)
+  }, []);
+
+
 
   return (
     <nav className={state ? styles.homenavmenu : styles.navmenu}>

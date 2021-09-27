@@ -13,8 +13,6 @@ import "../assets/__home.scss";
 const Home = () => {
   const location = useLocation()
   const router = useRouteMatch()
-  console.log(router, 'router match');
-  console.log(location, 'location');
   const {url} = router
   // const path = location.pathname.substring(0, location.pathname.length -1) 
   const {pathname} = location
@@ -26,7 +24,7 @@ const Home = () => {
     setTimeout(() => {
       setMenu(true);
       animatemenu();
-    }, 7000);
+    }, 4000);
   }, [window.location.href]);
 
   return (

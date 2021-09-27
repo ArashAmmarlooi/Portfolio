@@ -13,16 +13,16 @@ function animatebio() {
     targets: container,
     easing: "easeInOutCubic",
     height: "100vh",
-    duration: 2000,
+    duration: 1500,
   });
 
   anime({
     targets: h1,
     easing: "easeInOutCubic",
-    translateY: [{ value: [5, -10], duration: 700, delay: 2300 }],
+    translateY: [{ value: [5, -10], duration: 700, delay: 1400 }],
     opacity: [
-      { value: 1, delay: 2400 },
-      { value: 0, delay: 2400 },
+      { value: 1, delay: 1400 },
+      { value: 0, delay: 1400 },
     ],
     duration: 800,
   });
@@ -30,10 +30,10 @@ function animatebio() {
   anime({
     targets: p,
     easing: "easeInOutCubic",
-    translateY: [{ value: [5, -10], duration: 700, delay: 2800 }],
+    translateY: [{ value: [5, -10], duration: 700, delay: 1800 }],
     opacity: [
-      { value: 1, delay: 2700 },
-      { value: 0, delay: 2700 },
+      { value: 1, delay: 1800 },
+      { value: 0, delay: 1600 },
     ],
     duration: 800,
   });
@@ -42,8 +42,8 @@ function animatebio() {
     targets: homenavli,
     easing: "easeInOutCubic",
     opacity: [0, 1],
-    duration: 800,
-    delay: anime.stagger(300, { start: 6500 }),
+    duration: 700,
+    delay: anime.stagger(300, { start: 5500 }),
   });
 
   anime({
@@ -66,32 +66,13 @@ function animatebio() {
 function animatemenu() {
   const boxes = document.querySelectorAll(".containerbox-32tuN");
   const p = document.querySelectorAll(".containerbox-IkRjq p");
-  const titleheader = document.querySelector(".titleHeader-3EorM");
 
   anime({
     targets: boxes,
     easing: "easeInOutCubic",
     opacity: [0, 1],
-    duration: 700,
-    delay: anime.stagger(500, { start: 700 }),
-  });
-
-  // anime({
-  //   targets: p,
-  //   easing: "easeInOutCubic",
-  //   translateY: [-20, 0],
-  //   opacity: [0, 1],
-  //   duration: 900,
-  //   delay: anime.stagger(300, { start: 100 }),
-  // });
-
-  anime({
-    targets: titleheader,
-    easing: "easeInOutCubic",
-    opacity: [0, 1],
-    translateY: [-10, 0],
-    duration: 800,
-    delay: 4000,
+    duration: 600,
+    delay: anime.stagger(400, { start: 600 }),
   });
 }
 
@@ -109,7 +90,7 @@ function handleTechnology(node) {
     easing: "easeInOutCubic",
     translateY: [-20, 0],
     opacity: [0, 1],
-    duration: 500,
+    duration: 300,
     delay: anime.stagger(200, { start: 400 }),
   });
 
@@ -118,8 +99,8 @@ function handleTechnology(node) {
     easing: "easeInOutCubic",
     translateX: [-30, 0],
     opacity: [0, 1],
-    duration: 600,
-    delay: anime.stagger(150, { start: 700 }),
+    duration: 400,
+    delay: anime.stagger(150, { start: 600 }),
   });
 
   anime({
@@ -127,8 +108,8 @@ function handleTechnology(node) {
     easing: "easeInOutCubic",
     translateX: [30, 0],
     opacity: [0, 1],
-    duration: 600,
-    delay: anime.stagger(150, { start: 700 }),
+    duration: 400,
+    delay: anime.stagger(150, { start: 500 }),
   });
 }
 
@@ -181,7 +162,6 @@ function handleabout(node) {
 }
 
 function handleContact(node) {
-console.log(node, "contact node");
 const parags = node.querySelectorAll(".contactbox-3yyUT div")
 const image = node.querySelectorAll(".contactsvgcontainer-1NLZb img")
 
@@ -204,13 +184,37 @@ anime({
 });
 }
 
+function animatenavmenu (navli) {
+  const titleheader = document.querySelector(".titleHeader-1crw8");
+  
+  console.log(navli, 'navli');
+
+  anime({
+    targets: titleheader,
+    easing: "easeInOutCubic",
+    opacity: [0, 1],
+    translateY: [-20, 0],
+    duration: 800,
+    delay: 2000,
+  });
+
+  anime({
+    targets: navli,
+    easing: "easeInOutCubic",
+    translateY: [-20, 0],
+    opacity: [0, 1],
+    duration: 500,
+    delay: anime.stagger(180, { start: 2000 }),
+  });
+}
+
 //entering fucntion for all components
 function entering(node, appears) {
   const images = node.querySelectorAll(".maincontainer .rightcontainer img")
   hanldeservices(node);
   handleTechnology(node);
   handleabout(node);
-  handleContact(node)
+  handleContact(node);
   if (images.length === 2) autoSlide(images);
 }
 
@@ -249,15 +253,14 @@ function exiting(node) {
 }
 
 function enteringtech(node, isAppearing) {
-  console.log(node, "techmenu entering");
 }
 
 function exitingtech(node) {
-  console.log(node, "techmenu exiting");
 }
 
 export {
   animatemenu,
+  animatenavmenu,
   animatebio,
   entering,
   exiting,

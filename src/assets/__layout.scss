@@ -41,15 +41,19 @@ body {
 .aboutwrraper {
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .aboutcontainer {
     flex: 1;
     display: flex;
     margin: 0 auto;
     // transform: translateY(25vh) !important;
+    margin-top: 50px;
     line-height: 40px;
     width: 69%;
     justify-content: center;
-    min-height: 100vh;
+    // min-height: 100vh;
     align-items: center;
     p {
       width: 88%;
@@ -93,12 +97,24 @@ body {
   }
 }
 
-@media (max-width: 643px) {
+@media (max-width: 640px) {
+  .aboutwrraper {
+    flex-direction: column;
+    .aboutcontainer {
+      // transform: translateY(30vh) !important;
+      margin-top: 200px;
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (mmin-hight: 489px) {
   .aboutwrraper {
     .aboutcontainer {
-      p {
-        margin-top: 182px;
-      }
+      // transform: translateY(5vh) !important;
     }
   }
 }
