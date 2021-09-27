@@ -86,14 +86,28 @@ body {
   }
 }
 
-@media (max-width: 1176px) {
+@media (max-width: 726px) {
   .aboutwrraper {
-    flex-direction: column;
     .aboutcontainer {
+      margin-top: 100px;
       p {
         text-align: center;
       }
     }
+  }
+}
+
+@media (max-width: 1320px) {
+  .aboutwrraper {
+    .aboutcontainer {
+      margin-top: 200px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .aboutwrraper {
+    flex-direction: column;
   }
 }
 
