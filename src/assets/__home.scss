@@ -147,7 +147,7 @@ $boxheight: 250px;
         }
         &:hover {
           ~ img {
-            opacity: 1;
+            opacity: 1 !important;
           }
           ~ .fade {
             opacity: 0.3;

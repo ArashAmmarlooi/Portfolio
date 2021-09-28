@@ -8,10 +8,7 @@ export default function autoSlide(images) {
 
   interval = setInterval(() => {
     for (i = 0; i < images.length; i++) {
-      // if (!(images[i].classList.contains = "fade")) {
         images[i].classList.add("fadeSlide");
-        // images[i+1].classList.remove("fade");
-      // }
     }
     for (i = 0; i < images.length; i++) {
       images[i].style.display = "none";
@@ -23,6 +20,7 @@ export default function autoSlide(images) {
     images[index - 1].style.display = "block";
   }, [2000]);
 }
+
 
 function handleTab(links) {
   for (i = 0; i < links.length; i++) {
@@ -38,6 +36,9 @@ function handleTab(links) {
     });
   }
 }
+
+
+
 
 export { autoSlide, handleTab };
 // module.export ={

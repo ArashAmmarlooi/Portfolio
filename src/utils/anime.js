@@ -1,5 +1,5 @@
 import anime from "animejs/lib/anime.es.js";
-import {autoSlide} from "./javascript";
+import { autoSlide } from "./javascript";
 
 function animatebio() {
   const container = document.querySelector(".container-24LEp");
@@ -8,6 +8,7 @@ function animatebio() {
   const rect1 = document.querySelector(".rect1");
   const rect2 = document.querySelector("rect2");
   const homenavli = document.querySelectorAll(".homenavmenu-2znHH ul li");
+
 
   anime({
     targets: container,
@@ -33,7 +34,7 @@ function animatebio() {
     translateY: [{ value: [5, -10], duration: 700, delay: 1800 }],
     opacity: [
       { value: 1, delay: 1800 },
-      { value: 0, delay: 1600 },
+      { value: 0, delay: 1400 },
     ],
     duration: 800,
   });
@@ -46,33 +47,49 @@ function animatebio() {
     delay: anime.stagger(300, { start: 5500 }),
   });
 
-  anime({
-    targets: rect1,
-    easing: "easeInOutCubic",
-    translateY: [{ value: [10, -10], duration: 2000, delay: 4000 }],
-    opacity: [{ value: 0, duration: 2000 }],
-    duration: 1000,
-  });
 
-  anime({
-    targets: rect2,
-    easing: "easeInOutCubic",
-    translateY: [{ value: [10, -10], duration: 2000, delay: 4000 }],
-    opacity: [{ value: 0, duration: 2000 }],
-    duration: 1000,
-  });
+
+  // anime({
+  //   targets: rect1,
+  //   easing: "easeInOutCubic",
+  //   translateY: [{ value: [10, -10], duration: 2000, delay: 4000 }],
+  //   opacity: [{ value: 0, duration: 2000 }],
+  //   duration: 1000,
+  // });
+
+  // anime({
+  //   targets: rect2,
+  //   easing: "easeInOutCubic",
+  //   translateY: [{ value: [10, -10], duration: 2000, delay: 4000 }],
+  //   opacity: [{ value: 0, duration: 2000 }],
+  //   duration: 1000,
+  // });
 }
 
 function animatemenu() {
   const boxes = document.querySelectorAll(".containerbox-32tuN");
   const p = document.querySelectorAll(".containerbox-IkRjq p");
+  const images = document.querySelectorAll(
+    ".container-24LEp .containermenu-2d_fc .containerbox-32tuN img"
+  );
 
   anime({
     targets: boxes,
     easing: "easeInOutCubic",
     opacity: [0, 1],
     duration: 600,
-    delay: anime.stagger(400, { start: 600 }),
+    delay: anime.stagger(400, { start: 800 }),
+  });
+
+  anime({
+    targets: images,
+    easing: "easeInOutCubic",
+    opacity: [
+      { value: 1},
+      { value: 0 },
+    ],
+    duration: 600,
+    delay: anime.stagger(400, { start: 800 }),
   });
 }
 
@@ -137,57 +154,31 @@ function hanldeservices(node) {
   });
 }
 
-function handleabout(node) {
-  const parag = node.querySelector(
-    ".aboutcontainer-1UuJZ"
-  );
-
-  const contacts = node.querySelectorAll(".contactcontainer-ZZ6IH div")
-  anime({
-    targets: parag,
-    easing: "easeInOutCubic",
-    translateY: [-50, 0],
-    opacity: [0, 1],
-    duration: 1000,
-  });
+function handleContact(node) {
+  const parags = node.querySelectorAll(".contactbox-3yyUT div");
+  const image = node.querySelectorAll(".contactsvgcontainer-1NLZb img");
 
   anime({
-    targets: contacts,
+    targets: parags,
     easing: "easeInOutCubic",
     translateY: [-20, 20],
     opacity: [0, 1],
     duration: 500,
     delay: anime.stagger(180, { start: 200 }),
   });
+
+  anime({
+    targets: image,
+    easing: "easeInOutCubic",
+    translateY: [-30, 20],
+    opacity: [0, 1],
+    duration: 800,
+    delay: 200,
+  });
 }
 
-function handleContact(node) {
-const parags = node.querySelectorAll(".contactbox-3yyUT div")
-const image = node.querySelectorAll(".contactsvgcontainer-1NLZb img")
-
-anime({
-  targets: parags,
-  easing: "easeInOutCubic",
-  translateY: [-20, 20],
-  opacity: [0, 1],
-  duration: 500,
-  delay: anime.stagger(180, { start: 200 }),
-});
-
-anime({
-  targets: image,
-  easing: "easeInOutCubic",
-  translateY: [-30, 20],
-  opacity: [0, 1],
-  duration: 800,
-  delay: 200,
-});
-}
-
-function animatenavmenu (navli) {
+function animatenavmenu(navli) {
   const titleheader = document.querySelector(".titleHeader-1crw8");
-  
-  console.log(navli, 'navli');
 
   anime({
     targets: titleheader,
@@ -195,7 +186,7 @@ function animatenavmenu (navli) {
     opacity: [0, 1],
     translateY: [-20, 0],
     duration: 800,
-    delay: 2000,
+    delay: 3500,
   });
 
   anime({
@@ -204,16 +195,15 @@ function animatenavmenu (navli) {
     translateY: [-20, 0],
     opacity: [0, 1],
     duration: 500,
-    delay: anime.stagger(180, { start: 2000 }),
+    delay: anime.stagger(180, { start: 3500 }),
   });
 }
 
 //entering fucntion for all components
 function entering(node, appears) {
-  const images = node.querySelectorAll(".maincontainer .rightcontainer img")
+  const images = node.querySelectorAll(".maincontainer .rightcontainer img");
   hanldeservices(node);
   handleTechnology(node);
-  handleabout(node);
   handleContact(node);
   if (images.length === 2) autoSlide(images);
 }
@@ -226,7 +216,6 @@ function entered(node, isAppearing) {
   //   autoslide(images), 3500}
   //   );
   // // autoslide(images)
-
 }
 
 //components exiting function
@@ -252,11 +241,9 @@ function exiting(node) {
   });
 }
 
-function enteringtech(node, isAppearing) {
-}
+function enteringtech(node, isAppearing) {}
 
-function exitingtech(node) {
-}
+function exitingtech(node) {}
 
 export {
   animatemenu,

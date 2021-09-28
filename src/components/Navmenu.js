@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import styles from "../components/__Navmenu.scss";
-const { animatenavmenu }  = require("../utils/anime");
+const { animatenavmenu } = require("../utils/anime");
+import hovermode from "../utils/javascript";
 
 import {
   BrowserRouter as Router,
@@ -15,19 +16,28 @@ const Navmenu = () => {
   const [state, setState] = useState(false);
   const location = useLocation();
   const { pathname } = location;
-  const path = "https://arashammarlooi.github.io/Portfolio/"
+  const path = "https://arashammarlooi.github.io/Portfolio/";
 
   useEffect(() => {
-    if ((window.location.href == path) || (pathname == "/Portfolio")) setState(true);
+    if (window.location.href == path || pathname == "/Portfolio")
+      setState(true);
     else setState(false);
   }, [window.location.href, pathname]);
 
   useEffect(() => {
     const navli = document.querySelectorAll(".navmenu-1bbKl ul li");
-    animatenavmenu(navli)
+    const navlink = document.querySelectorAll(".navmenu-1bbKl ul li a");
+    console.log(navli, 'navli in nav');
+    animatenavmenu(navli);
+    // navlink.forEach((elmnt, index) => {
+    //     elmnt.addEventListener("mouseenter",(i) => {
+    //       elmnt.classList.add("navactive-FYBGN")
+    //     })
+    //     elmnt.addEventListener("mouseleave",(i) => {
+    //       elmnt.classList.remove("navactive-FYBGN")
+    //     })
+    //   })
   }, []);
-
-
 
   return (
     <nav className={state ? styles.homenavmenu : styles.navmenu}>
@@ -39,7 +49,7 @@ const Navmenu = () => {
             Home
           </NavLink>
         </li>
-        <li style={{cursor:"pointer"}}>
+        <li style={{ cursor: "pointer" }}>
           Services
           <span className={styles.arrow}></span>
           <div className={styles.submenu}>
@@ -49,24 +59,36 @@ const Navmenu = () => {
               </NavLink>
             </p>
             <p>
-              <NavLink activeClassName={styles.navactive} to="/Portfolio/mobile">
+              <NavLink
+                activeClassName={styles.navactive}
+                to="/Portfolio/mobile"
+              >
                 mobile
               </NavLink>
             </p>
             <p>
-              <NavLink activeClassName={styles.navactive} to="/Portfolio/product">
+              <NavLink
+                activeClassName={styles.navactive}
+                to="/Portfolio/product"
+              >
                 product
               </NavLink>
             </p>
             <p>
-              <NavLink activeClassName={styles.navactive} to="/Portfolio/devops">
+              <NavLink
+                activeClassName={styles.navactive}
+                to="/Portfolio/devops"
+              >
                 devops
               </NavLink>
             </p>
           </div>
         </li>
         <li>
-          <NavLink activeClassName={styles.navactive} to="/Portfolio/technologies">
+          <NavLink
+            activeClassName={styles.navactive}
+            to="/Portfolio/technologies"
+          >
             Technology
           </NavLink>
           {/* <div className={styles.submenu}>

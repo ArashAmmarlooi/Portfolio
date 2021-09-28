@@ -25,6 +25,7 @@
       font-size: 14px;
       color: gray;
       margin-right: 5vw;
+
       .arrow {
         position: absolute;
         top: 9px;
@@ -38,11 +39,8 @@
         transition: all 0.1s ease-in-out;
       }
 
-      &:hover {
-        .line {
-          opacity: 1;
-          width: 10px;
-        }
+      a {
+
       }
 
       div {
@@ -68,6 +66,18 @@
         text-decoration: none;
         color: gray;
         cursor: pointer;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 4px;
+          transform: translate(-17px, 9px);
+          background-color: #8a8aff;
+          transition: width 0.2s ease-in-out;
+        }
+        &:hover::before {
+          width: 10px;
+        }
       }
 
       &:nth-child(2) {
@@ -106,28 +116,26 @@
     flex-wrap: wrap;
     transition: all 0.3s ease 0.15s; /* Add the animation of 0.3 seconds. and the delay to 0.15 sec. */
     p {
-      .linesub {
-        position: absolute;
-        opacity: 0;
-        width: 0px;
-        height: 4px;
-        background-color: #8a8aff;
-        transform: translate(-2px, 9px);
-        transition: all 0.2s ease-in-out;
-      }
-      &:hover {
-        .linesub {
-          opacity: 1;
-          width: 10px;
-        }
-      }
       width: 70px;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 4px;
+        transform: translate(-3px, 9px);
+        background-color: #8a8aff;
+        transition: width 0.2s ease-in-out;
+      }
+      &:hover::before {
+        width: 10px;
+      }
       a {
         position: relative;
         z-index: 4;
         margin: 13px 0 0 14px;
         width: 80px;
         z-index: 2;
+
       }
     }
   }
@@ -170,23 +178,16 @@
       font-size: 14px;
       color: gray;
       margin-right: 5vw;
-      &:hover {
-        .line {
-          opacity: 1;
+      .navactive {
+        &::before {
+          content: "";
+          position: absolute;
           width: 10px;
+          height: 4px;
+          transform: translate(-17px, 9px);
+          background-color: #FFF;
         }
       }
-
-      .line {
-        position: absolute;
-        opacity: 0;
-        width: 0px;
-        height: 4px;
-        background-color: white;
-        transform: translate(-17px, 9px);
-        transition: all 0.2s ease-in-out;
-      }
-
       div {
         p {
           .navactive {
@@ -201,6 +202,18 @@
         text-decoration: none;
         color: white;
         cursor: pointer;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 4px;
+          transform: translate(-17px, 9px);
+          background-color: #FFF;
+          transition: width 0.2s ease-in-out;
+        }
+        &:hover::before {
+          width: 10px;
+        }
       }
 
       &:nth-child(2) {

@@ -24,7 +24,7 @@ const Home = () => {
     setTimeout(() => {
       setMenu(true);
       animatemenu();
-    }, 4000);
+    }, 3300);
   }, [window.location.href]);
 
   return (
