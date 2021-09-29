@@ -7,35 +7,36 @@
     .rightcontainer {
       flex: 1;
       display: flex;
-      align-items: center;
-      min-height: 55vh;
+      // align-items: center;
       justify-content: center;
+      min-height: 55vh;
       img {
-        margin-top: 10px;
+        // margin-top: 10px;
         position: absolute;
+        margin-top: 13%;
       }
       .websvg {
         min-width: 306px;
-        max-height: 49vh;
-        min-height: 28vh;
+        max-height: 370px;
+        // min-height: 28vh;
       }
 
       .mobilesvg {
         max-width: 253px;
-        max-height: 55vh;
-        min-height: 24vh;
+        max-height: 400px;
+        // min-height: 24vh;
       }
 
       .productsvg {
         min-width: 253px;
-        max-height: 32vh;
-        min-height: 20vh;
+        max-height: 251px;
+        // min-height: 20vh;
       }
 
       .devopssvg {
-        min-width: 253px;
-        max-height: 18vh;
-        min-height: 20vh;
+        max-width: 294px;
+        max-height: 293px;
+        min-height: 161px;
       }
 
       .fadeSlide {
@@ -50,13 +51,13 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      // justify-content: center;
       align-items: center;
       .description {
-        margin-top: 20px;
+        // margin-top: 20px;
         width: 80%;
         margin-left: 70px;
-        // min-height: 400px;
+        margin-top: 27%;
         font-size: 14px;
       }
 
@@ -104,23 +105,23 @@
       }
 
       .rightcontainer {
-        .websvg {
-          max-height: 40vh !important;
-        }
+        // .websvg {
+        //   max-height: 40vh !important;
+        // }
 
-        .mobilesvg {
-          margin-top: 100px;
-          max-height: 45vh !important;
-        }
+        // .mobilesvg {
+        //   margin-top: 100px;
+        //   max-height: 45vh !important;
+        // }
 
-        .productsvg {
-          max-height: 28vh !important;
-        }
+        // .productsvg {
+        //   max-height: 28vh !important;
+        // }
 
-        .devopssvg {
-          min-height: 16vh !important;
-          max-height: 15vh !important;
-        }
+        // .devopssvg {
+        //   min-height: 16vh !important;
+        //   max-height: 15vh !important;
+        // }
       }
     }
   }
