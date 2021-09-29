@@ -17,7 +17,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, "build"),
     filename: devMode ? "bundle.js" : "bundle.[contenthash].js",
-    // publicPath:"/"
+    publicPath:"/"
   },
   devServer: {
     port: 3000,

@@ -86,7 +86,7 @@ function animatemenu() {
     easing: "easeInOutCubic",
     opacity: [
       { value: 1},
-      { value: 0 },
+      { value: 0, delay:90},
     ],
     duration: 600,
     delay: anime.stagger(400, { start: 800 }),

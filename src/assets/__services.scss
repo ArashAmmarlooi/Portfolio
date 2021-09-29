@@ -34,6 +34,7 @@
       }
 
       .devopssvg {
+        margin-top: 20%;
         max-width: 294px;
         max-height: 293px;
         min-height: 161px;
@@ -105,23 +106,38 @@
       }
 
       .rightcontainer {
-        // .websvg {
-        //   max-height: 40vh !important;
-        // }
+        img{
+          margin-top: 20%;
+        }
+        .websvg {
+          max-height: 340px !important;
+        }
 
-        // .mobilesvg {
-        //   margin-top: 100px;
-        //   max-height: 45vh !important;
-        // }
+        .mobilesvg {
+          max-height: 350px;
+        }
 
-        // .productsvg {
-        //   max-height: 28vh !important;
-        // }
+        .productsvg {
+          max-height: 230px;
+        }
 
-        // .devopssvg {
-        //   min-height: 16vh !important;
-        //   max-height: 15vh !important;
-        // }
+        .devopssvg {
+          max-width: 250px;
+
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 882px) {
+  :global {
+    .maincontainer {
+      .rightcontainer {
+        img{
+          margin-top: 20%;
+        }
+
       }
     }
   }
