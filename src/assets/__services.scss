@@ -30,11 +30,12 @@
       .productsvg {
         min-width: 253px;
         max-height: 251px;
+        margin-top: 15% !important;
         // min-height: 20vh;
       }
 
       .devopssvg {
-        margin-top: 20%;
+        margin-top: 18%;
         max-width: 294px;
         max-height: 293px;
         min-height: 161px;
@@ -58,7 +59,7 @@
         // margin-top: 20px;
         width: 80%;
         margin-left: 70px;
-        margin-top: 27%;
+        margin-top: 28%;
         font-size: 14px;
       }
 
@@ -106,9 +107,7 @@
       }
 
       .rightcontainer {
-        img{
-          margin-top: 20%;
-        }
+
         .websvg {
           max-height: 340px !important;
         }
@@ -130,15 +129,4 @@
   }
 }
 
-@media (max-width: 882px) {
-  :global {
-    .maincontainer {
-      .rightcontainer {
-        img{
-          margin-top: 20%;
-        }
 
-      }
-    }
-  }
-}

@@ -45,10 +45,10 @@ const App = () => {
   const timeout = { enter: 500, exit: 500 };
 
   useEffect(() => {
-    const isTech = window.location.href == techlocalpath;
+    const isTech = window.location.href == techlivepath;
     if (isTech) history.push("/Portfolio/technologies/frontend")
   }, [window.location.href]);
-  
+
   return (
     <>
       <Navmenu />
