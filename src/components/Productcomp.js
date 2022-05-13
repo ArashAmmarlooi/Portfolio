@@ -8,7 +8,7 @@ const Product = () => {
       <div className={styles.divBar}>
         <p>Adobe photoshop</p>
         <div className={styles.divSpan}>
-          <span style={{background:"#628cf0"}} style={{background:"#628cf0"}}></span>
+          <span style={{background:"#628cf0"}}></span>
           <span style={{background:"#628cf0"}}></span>
           <span style={{background:"#628cf0"}}></span>
           <span style={{background:"#628cf0"}}></span>

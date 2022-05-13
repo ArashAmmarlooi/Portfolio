@@ -16,8 +16,10 @@ const Contact = () => {
             <div className={styles.phone}>
               <img src={Phone} />
               <span>
-                <p>+98 (903) 111 63 18</p>
-                <p>+1 (514) 804 46 90 </p>
+                <p>+98 912 802 46 90</p>
+                <p>+98 936 252 61 39</p>
+                <p>refreence number : +1 514 804 46 90</p>
+                <p>skype : arashammarlooi_1</p>
               </span>
             </div>
             <div className={styles.email}>
@@ -29,7 +31,7 @@ const Contact = () => {
             <div className={styles.linkedin}>
               <img src={Linkedin} />
               <a href="https://www.linkedin.com/in/arash-ammarlooi-12372b147/">
-                https://www.linkedin.com/in/arash-ammarlooi-12372b147/
+              https://www.linkedin.com/in/arash-ammarlooi-12372b147/
               </a>
             </div>
           </div>

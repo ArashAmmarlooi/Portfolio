@@ -12,7 +12,7 @@ const About = () => {
         <div className={styles.aboutcontainer}>
           <p>
             Hi, i am arash ammarlooi , I,m a full stack web & mobile application developer & designer . I
-            have worked for about 5 years in web and mobile application
+            have worked for about 6 years in web and mobile application
             engineering & i have exprience in developing and managing Different
             web and mobile apps . in this case i have knowledge about
             implementing the code with javascript (react js , nodejs) and
