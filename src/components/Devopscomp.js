@@ -11,7 +11,7 @@ const Devops = () => {
           <span style={{background:"#628cf0"}}></span>
           <span style={{background:"#628cf0"}}></span>
           <span style={{background:"#628cf0"}}></span>
-          <span></span>
+          <span style={{background:"#628cf0"}}></span>
           <span></span>
         </div>
       </div>
@@ -22,7 +22,7 @@ const Devops = () => {
           <span style={{background:"#628cf0"}}></span>
           <span style={{background:"#628cf0"}}></span>
           <span style={{background:"#628cf0"}}></span>
-          <span></span>
+          <span style={{background:"#628cf0"}}></span>
           <span></span>
         </div>
       </div>
@@ -65,7 +65,7 @@ const Devops = () => {
         <div className={styles.divSpan}>
           <span style={{background:"#628cf0"}}></span>
           <span style={{background:"#628cf0"}}></span>
-          <span></span>
+          <span style={{background:"#628cf0"}}></span>
           <span></span>
           <span></span>
         </div>
